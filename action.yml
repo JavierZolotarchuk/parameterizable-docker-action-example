@@ -6,6 +6,10 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  dockerfile:
+    description: 'specify Dockerfile to use'
+    required: false
+    default: 'Dockerfile'
 #  alpine-version:
 #    description: 'alpine version'
 #    required: true
@@ -15,6 +19,9 @@ outputs:
     description: 'The time we greeted you'
 runs:
   using: 'docker'
-  image: 'Dockerfile --build-arg alpine_version=3.9.5'
+  image: 'Dockerfile' # --build-arg alpine_version=3.9.5'
+  args:
+    - -f ${{ inputs.dockerfile }}
+    - '--build-arg alpine_version=3.9.5'
 #  args:
 #    - --build-arg alpine_version=3.9.5
