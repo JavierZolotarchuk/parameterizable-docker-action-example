@@ -6,7 +6,7 @@ inputs:
     description: 'alpine version'
     required: true
 outputs:
-  alpine-version-running:
+  version:
     description: 'alpine version that is running now'
 runs:
   using: 'docker'

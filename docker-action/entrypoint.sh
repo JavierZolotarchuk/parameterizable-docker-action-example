@@ -1,5 +1,5 @@
 #!/bin/sh -l
 
-alpine-version-running=$(cat /etc/alpine-release)
+version=$(cat /etc/alpine-release)
 
-echo "::set-output name=alpine-version-running::${alpine-version-running}"
+echo "::set-output name=version::${version}"
