@@ -8,7 +8,7 @@
 #cd dockerPosta
 #docker build --build-arg alpine_version=3.9.5 .
 echo "alojaaaaaaa"
-docker run hello-world
+-ti docker run hello-world
 #docker build .
 #echo "docker build OK"
 #docker build -t javee . && docker run -it javee
