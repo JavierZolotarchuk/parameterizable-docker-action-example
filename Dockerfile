@@ -5,7 +5,7 @@ FROM alpine:latest
 COPY entrypoint.sh /entrypoint.sh
 COPY dockerPosta /dockerPosta
 
-#RUN apk update && apk add --no-cache docker-cli
+RUN apk add --update --no-cache docker
 RUN ["chmod", "+x", "/entrypoint.sh"]
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)

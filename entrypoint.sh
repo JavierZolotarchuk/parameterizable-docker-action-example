@@ -7,8 +7,14 @@
 # shellcheck disable=SC2164
 #cd dockerPosta
 #docker build --build-arg alpine_version=3.9.5 .
-echo "alojaaaaaaa"
--ti docker run hello-world
+#echo "alojaaaaaaa"
+#docker --version
 #docker build .
 #echo "docker build OK"
 #docker build -t javee . && docker run -it javee
+
+cd dockerPosta
+echo "ejecutando docker build... charannnn"
+docker build -t javee --build-arg alpine_version=3.9.5 . && docker run -it javee
+
+

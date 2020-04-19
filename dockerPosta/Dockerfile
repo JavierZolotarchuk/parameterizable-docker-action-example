@@ -1,5 +1,5 @@
 # Container image that runs your code
-ARG alpine_version=3.9.5
+ARG alpine_version
 FROM alpine:${alpine_version}
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
