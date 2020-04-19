@@ -8,11 +8,11 @@ jobs:
     # To use this repository's private action, you must check out the repository
     - name: Checkout to root dir
       uses: actions/checkout@v2
-    - name: Hello world action step #TODO cambiar esto
-      id: hello #TODO cambiar esto
+    - name: Create alpine image with parameterizable version
+      id: alpine
       uses: ./
       with:
         alpine-version: '3.9.5'
-    # Use the output from the `hello` step #TODO cambiar esto
+    # Use the output from the `alpine` step
     - name: Get alpine version
-      run: echo "Alpine version is ${{ steps.hello.outputs.version }}"
+      run: echo "Alpine version is ${{ steps.alpine.outputs.version }}"
