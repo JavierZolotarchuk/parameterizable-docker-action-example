@@ -5,15 +5,7 @@ inputs:
   who-to-greet:  # id of input
     description: 'Who to greet'
     required: true
-    default: 'World'
-  dockerfile: #TODO despues borrar
-    description: 'specify Dockerfile to use'
-    required: false
-    default: 'Dockerfile'
-  docker-build-args: #TODO despues borrar
-    description: 'docker build-args arguments'
-    required: false
-    default: '--build-arg alpine_version=3.9.5'
+    default: '3.9.5'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -21,5 +13,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - -f ${{ inputs.dockerfile }}
-    - ${{ inputs.docker-build-args }}
+    - ${{ inputs.who-to-greet }}
