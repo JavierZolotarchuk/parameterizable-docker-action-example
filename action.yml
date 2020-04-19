@@ -10,6 +10,10 @@ inputs:
     description: 'specify Dockerfile to use'
     required: false
     default: 'Dockerfile'
+  docker-build-args:
+    description: 'docker build-args arguments'
+    required: false
+    default: '--build-arg alpine_version=3.9.5'
 #  alpine-version:
 #    description: 'alpine version'
 #    required: true
@@ -22,6 +26,6 @@ runs:
   image: 'Dockerfile' # --build-arg alpine_version=3.9.5'
   args:
     - -f ${{ inputs.dockerfile }}
-    - '--build-arg alpine_version=3.9.5'
+    - ${{ inputs.docker-build-args }}
 #  args:
 #    - --build-arg alpine_version=3.9.5
