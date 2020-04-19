@@ -15,6 +15,6 @@
 
 cd dockerPosta
 echo "ejecutando docker build... charannnn"
-docker build -t javee --build-arg alpine_version=3.9.5 . && docker run -it javee
+docker build -t javee --build-arg alpine_version=3.9.5 . && docker run javee
 
 
