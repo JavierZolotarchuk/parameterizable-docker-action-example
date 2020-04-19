@@ -13,7 +13,7 @@ inputs:
   docker-build-args:
     description: 'docker build-args arguments'
     required: false
-    default: '--build-arg alpine_version=3.9.5'
+    default: '--build-arg alpine_version=3.9.5 .'
 #  alpine-version:
 #    description: 'alpine version'
 #    required: true
