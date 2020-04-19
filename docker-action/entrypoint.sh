@@ -1,4 +1,4 @@
 #!/bin/sh -l
 
-cat /etc/alpine-release
+alpine-version-running=$(cat /etc/alpine-release)
 

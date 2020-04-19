@@ -1,18 +1,18 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  parameterizable_docker_action_test_job:
     runs-on: ubuntu-latest
-    name: A job to say hello to Javeee
+    name: A job to create parameterizable docker action
     steps:
     # To use this repository's private action, you must check out the repository
     - name: Checkout to root dir
       uses: actions/checkout@v2
-    - name: Hello world action step
-      id: hello
+    - name: Hello world action step #TODO cambiar esto
+      id: hello #TODO cambiar esto
       uses: ./
       with:
-        who-to-greet: 'Javeee'
-    # Use the output from the `hello` step
-    - name: Get the output time
-      run: echo "The time was ${{ steps.hello.outputs.time }}"
+        alpine-version: '3.9.5'
+    # Use the output from the `hello` step #TODO cambiar esto
+    - name: Get alpine version
+      run: echo "Alpine version is ${{ steps.hello.outputs.alpine-version-running }}"
