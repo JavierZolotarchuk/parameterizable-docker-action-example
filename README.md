@@ -1,1 +1,1 @@
-# my-own-action!
+# parameterizable-docker-action-example

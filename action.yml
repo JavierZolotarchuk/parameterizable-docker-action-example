@@ -1,14 +1,11 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Print customizable alpine version'
+description: 'print alpine version'
 inputs:
   alpine-version:
     description: 'alpine version'
     required: false
     default: '3.9.5'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
 
 runs:
   using: 'docker'
