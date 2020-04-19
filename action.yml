@@ -15,4 +15,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - '&& docker --version'
+    - '/usr/bin/docker --version'
