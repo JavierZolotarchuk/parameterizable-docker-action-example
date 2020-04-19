@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Hello world action step
       id: hello
-      uses: actions/my-own-action@v1
+      uses: ./
       with:
         who-to-greet: 'Javeee'
     # Use the output from the `hello` step
